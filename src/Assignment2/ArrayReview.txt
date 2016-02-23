@@ -1,0 +1,13 @@
+4.
+
+a. No, can't assign value to an array at an index that exceeds assignable indexes
+
+b. No, can't assign value to an array at a negative index
+
+c. Yes
+
+d. No, there was nothing assigned to the array so you can't retrieve anything out of it.
+
+5.
+
+X = { 0 , 1 }
