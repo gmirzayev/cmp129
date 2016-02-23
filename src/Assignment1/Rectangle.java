@@ -1,11 +1,9 @@
-
-
 public class Rectangle 
 {
-	private double length_;
-	private double width_;
+	private final double length_;
+	private final double width_;
 	
-	public Rectangle(double length, double width)
+	public Rectangle(final double length, final double width)
 	{
 		length_ = length;
 		width_ = width;
@@ -35,7 +33,10 @@ public class Rectangle
 	@Override
 	public String toString()
 	{
-		return new String("rectangle 1ength=" + length_ + " width=" + width_);
+		StringBuilder sb = new StringBuilder();
+		sb.append("length=").append(length_).append(":width=").append(width_);
+		return sb.toString();
+		//return new String("rectangle 1ength=" + length_ + " width=" + width_);
 	}
 	
 	public static void main(String [] args)
@@ -62,3 +63,4 @@ public class Rectangle
 	}
 
 }
+
