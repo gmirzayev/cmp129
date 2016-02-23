@@ -1,0 +1,25 @@
+Moving average trader
+
+Stock -> name of company
+	 ticker symbol
+	 price arnings ratio
+	 52 week high
+	 52 week low
+
+calculate class
+	moving average calculator
+
+trading algorith
+
+
+Class Stock
+[5 elements
+2 string (name,ticker)
+3 double(PERatio, 52week high, 52 week low)]
+
+Class MovingAverage Calc
+[stock prices, period]
+
+Class Trader
+[]
+
