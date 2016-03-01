@@ -1,5 +1,3 @@
-package trader;
-
 import java.util.ArrayList;
 
 public class MovingAverage {
