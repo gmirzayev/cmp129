@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Example2 
 {
 
-	public static void read(String fileName, int ix)
+	public static void read(String fileName, int ix) throws BadCsvFileException
 	{
 		try
 		{
@@ -32,7 +32,7 @@ public class Example2
 				}
 			} catch(NumberFormatException e)
 			{
-				e.printStackTrace(System.err);
+				throw new BadCsvFileException("file" + fileName);
 			} catch(Exception e)
 			{
 				System.out.println("Catching generic exception " + e.getMessage());
@@ -48,16 +48,21 @@ public class Example2
 		}	
 	}
 
+	public static void callRead(String fname, int ix)
+	{
+		try{
+			read(fname, ix);
+		} catch (BadCsvFileException e)
+		{
+			
+		}
+	}
+	
 	public static void main(String [] args)
 	{
 		//readData("someName");
 		String fname = "C:/Users/mirzayev.gleb/Documents/GoogleRecords.csv";
-		read(fname, 0);
-		read(fname, 1);
-		read(fname, 2);
-		read(fname, 3);
-		read(fname, 111);
-		read(fname, 4);
+		callRead(fname, 0);
 	}
 	
 }
